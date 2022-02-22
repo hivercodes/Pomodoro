@@ -17,9 +17,11 @@ timer = None
 # ---------------------------- TIMER RESET ------------------------------- # 
 
 def reset():
+    global reps
     window.after_cancel(timer)
     canvas.itemconfig(timer_text, text=f"00:00")
     timer_title.config(text="Timer", fg=GREEN)
+    reps = 0
 
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
